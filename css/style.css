@@ -14,7 +14,7 @@ body {
 .hero-section {
   position: relative;
   height: 50vh;
-  background: url("../img/ai-bg.jpg") center/cover no-repeat;
+  background: url("../img/ai-1.jpg") center/cover no-repeat;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -100,9 +100,11 @@ body {
 /* =======================================================
    🔹 МІСІЯ ПРОЄКТУ (тільки текстова секція)
 ======================================================= */
+
 .mission-only {
   background: #f7f7f9; /* легкий світлий фон, без картинок */
   padding: 80px 0; /* повітря зверху/знизу */
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .mission-wrap {
@@ -126,12 +128,15 @@ body {
 }
 
 /* =======================================================
-   🔹 ІНІЦІАТИВИ ПРОЄКТУ
-   — Текст зліва, фото справа, все в один ряд
+   🔹 ІНІЦІАТИВИ ПРОЄКТУ — Фото зліва, текст справа
+======================================================= */
+/* =======================================================
+   🔹 ІНІЦІАТИВИ ПРОЄКТУ — Фото зліва, текст справа
 ======================================================= */
 .ai-initiatives {
   background: #fff;
   padding: 80px 0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .initiatives-wrap {
@@ -139,28 +144,48 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap; /* щоб добре виглядало на малих екранах */
+  align-items: stretch; /* 🔸 тепер усі елементи по одній висоті */
+  flex-wrap: wrap;
   gap: 40px;
 }
 
-/* Один рядок з текстом і фото */
+/* 🔸 Кожна ініціатива */
 .initiative {
-  flex: 1 1 48%; /* щоб кожна займала ~половину ширини */
+  flex: 1 1 48%;
   display: flex;
-  align-items: center;
+  align-items: stretch; /* 🔸 вирівнює по висоті */
   justify-content: space-between;
   gap: 30px;
+  background: #fff;
 }
 
-/* Текст */
-.initiative-text {
+/* 🔹 Зображення */
+.initiative-img {
   flex: 1;
+  display: flex;
+  align-items: center; /* центрує по вертикалі */
+  justify-content: center;
+}
+
+.initiative-img img {
+  width: 100%;
+  height: 100%; /* 🔸 тягнеться по висоті блока */
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 🔹 Текст */
+.initiative-text {
+  flex: 2;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 🔸 кнопка внизу */
 }
 
 .initiative-text h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-bottom: 15px;
   color: #111;
 }
@@ -169,24 +194,10 @@ body {
   color: #444;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  flex-grow: 1;
 }
 
-/* Зображення */
-.initiative-img {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.initiative-img img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* Кнопка */
+/* 🔹 Кнопка */
 .btn {
   display: inline-block;
   background: #c2185b;
@@ -196,13 +207,15 @@ body {
   border-radius: 25px;
   font-weight: 500;
   transition: 0.3s;
+  align-self: flex-start;
 }
 
 .btn:hover {
   background: #9c134a;
+  transform: scale(1.05);
 }
 
-/* 🔸 Адаптивність для мобільних */
+/* 🔸 Адаптивність */
 @media (max-width: 800px) {
   .initiative {
     flex-direction: column;
@@ -210,6 +223,90 @@ body {
   }
 
   .initiative-img img {
-    max-width: 300px;
+    max-width: 250px;
+    max-height: 200px;
+  }
+
+  .initiative-text {
+    align-items: center;
+  }
+
+  .btn {
+    align-self: center;
+  }
+}
+
+/* =======================================================
+   🔹 Заклик до дії (CTA)
+======================================================= */
+.cta-section {
+  background: #faf6fb;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-container {
+  width: min(800px, 90%);
+  margin: 0 auto;
+}
+
+.cta-container p {
+  font-size: 1.4rem;
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #c2185b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 40px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #9c134a;
+  transform: scale(1.05);
+}
+
+/* 🔸 Адаптивність */
+@media (max-width: 700px) {
+  .cta-container p {
+    font-size: 1.1rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+}
+
+/* =======================================================
+   🔹 Footer
+======================================================= */
+.footer {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.95rem;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+.footer strong {
+  color: #000;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.85rem;
   }
 }
