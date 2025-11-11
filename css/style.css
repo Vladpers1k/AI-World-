@@ -24,6 +24,22 @@ body {
   overflow: hidden;
 }
 
+.home-bg {
+  background: url("../img/ai-1.jpg") center/cover no-repeat;
+}
+
+.tools-bg {
+  background: url("../img/generative-ai-tools.jpg") center/cover no-repeat;
+}
+
+.about-bg {
+  background: url("../img/ai-usage.jpg") center/cover no-repeat;
+}
+
+.contacts-bg {
+  background: url("../img/ContactUs_1.2.jpg") center/cover no-repeat;
+}
+
 .hero-section::before {
   content: "";
   position: absolute;
@@ -63,6 +79,13 @@ body {
   color: white;
   font-weight: 500;
   transition: 0.3s;
+}
+
+.nav-links a.active {
+  color: #ff4081;
+  font-weight: 600;
+  border-bottom: 2px solid #ff4081;
+  padding-bottom: 2px;
 }
 
 .nav-links a:hover {
@@ -309,4 +332,67 @@ body {
   .footer {
     font-size: 0.85rem;
   }
+}
+
+/* 🔹 Основний контейнер для кожної секції */
+.ai-tools {
+  padding: 70px 0;
+  text-align: center;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ai-tools:last-child {
+  border-bottom: none; /* остання без лінії */
+}
+
+.ai-tools h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #c2185b;
+}
+
+.section-intro {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+}
+
+/* 🔹 Сітка по 2 картки в ряд */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 40px;
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* 🔹 Стиль картки (як у тебе) */
+.tool-card {
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tool-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.tool-card h3 a {
+  color: #c2185b;
+  text-decoration: underline;
 }
