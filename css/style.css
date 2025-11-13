@@ -25,7 +25,6 @@ body {
   }
 }
 
-/* Якщо хочеш — можна додати невелике затримання для ефекту “притягування” */
 .hero-section,
 .ai-tools,
 .ai-usage-section,
@@ -184,7 +183,6 @@ footer {
   object-fit: cover;
 }
 
-/* Кнопки "вліво-вправо" */
 .prev,
 .next {
   cursor: pointer;
@@ -212,7 +210,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Крапки під слайдером */
 .dots {
   text-align: center;
   padding: 15px;
@@ -230,13 +227,11 @@ footer {
   transition: background-color 0.4s;
 }
 
-/* ✅ Унікальний клас для активної крапки */
 .dot-active,
 .dot:hover {
   background-color: #c2185b;
 }
 
-/* Анімація плавного переходу */
 .fade {
   animation-name: fade;
   animation-duration: 1.2s;
@@ -252,17 +247,17 @@ footer {
 }
 
 /* =======================================================
-   🔹 МІСІЯ ПРОЄКТУ (тільки текстова секція)
+   🔹 МІСІЯ ПРОЄКТУ 
 ======================================================= */
 
 .mission-only {
-  background: #f7f7f9; /* легкий світлий фон, без картинок */
-  padding: 80px 0; /* повітря зверху/знизу */
+  background: #f7f7f9;
+  padding: 80px 0;
   border-bottom: 1px solid #e0e0e0;
 }
 
 .mission-wrap {
-  width: min(900px, 86%); /* адаптивна ширина */
+  width: min(900px, 86%);
   margin: 0 auto;
   text-align: center;
 }
@@ -282,7 +277,7 @@ footer {
 }
 
 /* =======================================================
-   🔹 ІНІЦІАТИВИ ПРОЄКТУ — Фото зліва, текст справа
+   🔹 ІНІЦІАТИВИ ПРОЄКТУ 
 ======================================================= */
 .ai-initiatives {
   background: #fff;
@@ -295,44 +290,41 @@ footer {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* 🔸 тепер усі елементи по одній висоті */
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 40px;
 }
 
-/* 🔸 Кожна ініціатива */
 .initiative {
   flex: 1 1 48%;
   display: flex;
-  align-items: stretch; /* 🔸 вирівнює по висоті */
+  align-items: stretch;
   justify-content: space-between;
   gap: 30px;
   background: #fff;
 }
 
-/* 🔹 Зображення */
 .initiative-img {
   flex: 1;
   display: flex;
-  align-items: center; /* центрує по вертикалі */
+  align-items: center;
   justify-content: center;
 }
 
 .initiative-img img {
   width: 100%;
-  height: 100%; /* 🔸 тягнеться по висоті блока */
+  height: 100%;
   max-height: 330px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-/* 🔹 Текст */
 .initiative-text {
   flex: 2;
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 🔸 кнопка внизу */
+  justify-content: space-between;
 }
 
 .initiative-text h3 {
@@ -348,7 +340,6 @@ footer {
   flex-grow: 1;
 }
 
-/* 🔹 Кнопка */
 .btn {
   display: inline-block;
   background: #c2185b;
@@ -366,7 +357,6 @@ footer {
   transform: scale(1.05);
 }
 
-/* 🔸 Адаптивність */
 @media (max-width: 800px) {
   .initiative {
     flex-direction: column;
@@ -425,7 +415,6 @@ footer {
   transform: scale(1.05);
 }
 
-/* 🔸 Адаптивність */
 @media (max-width: 700px) {
   .cta-container p {
     font-size: 1.1rem;
@@ -436,6 +425,9 @@ footer {
   }
 }
 
+/* =======================================================
+   🔹 AI - TOOLS(інструменти)
+======================================================= */
 /* 🔹 Основний контейнер для кожної секції */
 .ai-tools {
   padding: 70px 0;
@@ -445,7 +437,7 @@ footer {
 }
 
 .ai-tools:last-child {
-  border-bottom: none; /* остання без лінії */
+  border-bottom: none;
 }
 
 .ai-tools h2 {
@@ -460,7 +452,6 @@ footer {
   font-size: 1.5rem;
 }
 
-/* 🔹 Сітка по 2 картки в ряд */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -469,7 +460,6 @@ footer {
   margin: 0 auto;
 }
 
-/* 🔹 Стиль картки (як у тебе) */
 .tool-card {
   background: #fff;
   border: 2px solid #eee;
@@ -505,9 +495,6 @@ footer {
   font-size: 1.13rem;
 }
 
-/* =======================================================
-   🎯 Кнопки в секції AI Tools
-======================================================= */
 .tool-btn {
   display: inline-block;
   background: #c2185b;
@@ -528,9 +515,6 @@ footer {
   box-shadow: 0 0 10px rgba(194, 24, 91, 0.4);
 }
 
-/* =======================================================
-   🎨 Заголовки інструментів (посилання)
-======================================================= */
 .tool-card h3 a {
   color: #c2185b;
   text-decoration: underline;
@@ -541,7 +525,7 @@ footer {
   color: #9c134a;
   text-decoration: none;
 }
-/* Щоб центрувати їх у картках */
+
 .tool-card {
   display: flex;
   flex-direction: column;
@@ -551,7 +535,7 @@ footer {
 
 .tutorial-link {
   font-size: 1.1rem;
-  color: #0077b6; /* гарний синюватий відтінок */
+  color: #0077b6;
   text-decoration: underline;
   margin-top: 10px;
   transition: 0.3s ease;
@@ -564,7 +548,7 @@ footer {
 }
 
 /* =======================================================
-   🧠 Застосування AI (оновлено)
+   🧠 Застосування AI 
 ======================================================= */
 .ai-usage-section {
   padding: 90px 0 40px;
@@ -587,7 +571,7 @@ footer {
 
 .usage-img img {
   width: 350px;
-  max-width: 600px; /* ширше */
+  max-width: 600px;
   height: auto;
   border-radius: 15px;
   object-fit: cover;
@@ -606,14 +590,11 @@ footer {
 }
 
 .usage-text p {
-  font-size: 1.4rem; /* трохи більший */
+  font-size: 1.4rem;
   line-height: 1.8;
   color: #333;
 }
 
-/* =======================================================
-   💡 Цікавий факт — тепер окрема секція
-======================================================= */
 .fact-section {
   background: #fff;
   padding: 25px 0 60px;
@@ -646,9 +627,6 @@ footer {
   text-align: center;
 }
 
-/* =======================================================
-   🌍 Висновок (останній блок)
-======================================================= */
 .ai-conclusion {
   background: #fafafa;
   text-align: center;
@@ -675,13 +653,13 @@ footer {
 }
 
 .contacts-container {
-  width: 100%; /* фон розтягується на всю ширину */
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 .contacts-inner {
-  width: 90%; /* контент обмежений всередині */
+  width: 90%;
   max-width: 1400px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -741,7 +719,6 @@ footer {
   margin-right: auto;
 }
 
-/* Плавна поява */
 .contacts-section,
 footer {
   animation: fadeInElement 1.2s ease-out forwards;
