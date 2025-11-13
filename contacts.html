@@ -27,7 +27,8 @@
     </div>
   </header>
 
-  <section class="contacts-section">
+
+  <section class="contacts-section reveal">
     <div class="contacts-container">
       <div class="contacts-inner">
 
@@ -58,10 +59,24 @@
     </div>
   </section>
 
+  <section class="contact-form-section reveal">
+    <h2>📬 Напиши нам повідомлення</h2>
+    <form class="contact-form" onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Ваше ім'я" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" rows="4" placeholder="Ваше повідомлення..." required></textarea>
+      <button type="submit" class="send-btn">Надіслати</button>
+    </form>
+    <p id="form-status" class="form-status"></p>
+  </section>
+
 
   <footer class="footer">
     <p>© 2025 <strong>AI World</strong> | Усі права захищено | Створено Владиславом</p>
   </footer>
+
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>

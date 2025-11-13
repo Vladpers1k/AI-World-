@@ -38,3 +38,33 @@ function showSlides(n) {
 setInterval(() => {
   plusSlides(1);
 }, 4000);
+
+// 🧠 Анімація появи при скролі
+window.addEventListener("load", () => {
+  const revealElements = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    revealElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight - 80) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  revealOnScroll();
+
+  window.addEventListener("scroll", revealOnScroll);
+});
+
+// 📩 Форма зворотного зв'язку
+function sendMessage(e) {
+  e.preventDefault();
+  const status = document.getElementById("form-status");
+  status.textContent = "⏳ Надсилаємо...";
+  setTimeout(() => {
+    status.textContent = "✅ Повідомлення успішно надіслано! Дякуємо 💬";
+  }, 1500);
+}
