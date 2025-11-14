@@ -47,15 +47,13 @@ window.addEventListener("load", () => {
     revealElements.forEach((el) => {
       const rect = el.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-
       if (rect.top < windowHeight - 80) {
         el.classList.add("visible");
       }
     });
   }
 
-  revealOnScroll();
-
+  window.addEventListener("load", revealOnScroll);
   window.addEventListener("scroll", revealOnScroll);
 });
 
@@ -68,3 +66,25 @@ function sendMessage(e) {
     status.textContent = "✅ Повідомлення успішно надіслано! Дякуємо 💬";
   }, 1500);
 }
+
+// 🍔 Меню бургер
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const menuOverlay = document.getElementById("menu-overlay");
+
+menuToggle.addEventListener("click", () => {
+  const isActive = menuToggle.classList.toggle("active");
+  navLinks.classList.toggle("active");
+  menuOverlay.classList.toggle("active");
+  document.body.classList.toggle("menu-open", isActive);
+});
+
+// Закриття при кліку на пункт меню або фон
+document.querySelectorAll(".nav-links a, #menu-overlay").forEach((el) => {
+  el.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
+    navLinks.classList.remove("active");
+    menuOverlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  });
+});
